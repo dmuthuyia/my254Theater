@@ -1,0 +1,18 @@
+	<div class="col-md-10 col-md-offset-1">
+		<h1><%= params[:category] %></h1>
+
+		<% if @plays.count == 0 %>
+			<h3>There are no plays in this category</h3>
+
+		<% else %>
+			<% @plays.each do |play| %>
+			<div class="fireplace2">
+				<h2><%= link_to play.title, play_path(play) %></h2>
+			</div>
+
+			<% end %>
+		<% end %>
+	</div>
+
+
+
